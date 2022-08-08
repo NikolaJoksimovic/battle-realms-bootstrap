@@ -1,0 +1,109 @@
+:root{
+    --font-primary: 'Cinzel', serif;
+
+    /* colors */
+    --clr-black: black;
+    --clr-white: white;
+    --clr-gray-dark: rgb(14, 14, 14);
+    --clr-blood-dark: #880808;
+    --clr-silver: #adadad;
+
+    --clr-hover-light: var(--clr-silver);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: var(--font-primary);
+    background-color: var(--clr-black);
+    letter-spacing: 0.05rem;
+}
+.custom-bg-black{
+    background-color: var(--clr-black);
+}
+.width-90{
+    max-width: 90%;
+}
+.width-80{
+    max-width: 80%;
+}
+.rotate-90{
+    transform: rotate(90deg);
+}
+.height100vh{
+    height: 100vh;
+}
+.gradient-text-gray-gloss{
+    
+    background: #7d8589;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #7d8589 0%, #a8b6bf 39%, #a8b6bf 39%, #b5c6d0 48%, #b5c6d0 50%, #d8e1e7 50%, #b5c6d0 50%, #b5c6d0 50%, #b5c6d0 50%, #f2f6f8 54%, #f2f6f8 54%, #f2f6f8 72%, #f2f6f8 79%, #f2f6f8 90%, #f2f6f8 97%);
+        /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #7d8589 0%, #a8b6bf 39%, #a8b6bf 39%, #b5c6d0 48%, #b5c6d0 50%, #d8e1e7 50%, #b5c6d0 50%, #b5c6d0 50%, #b5c6d0 50%, #f2f6f8 54%, #f2f6f8 54%, #f2f6f8 72%, #f2f6f8 79%, #f2f6f8 90%, #f2f6f8 97%);
+        /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #7d8589 0%, #a8b6bf 39%, #a8b6bf 39%, #b5c6d0 48%, #b5c6d0 50%, #d8e1e7 50%, #b5c6d0 50%, #b5c6d0 50%, #b5c6d0 50%, #f2f6f8 54%, #f2f6f8 54%, #f2f6f8 72%, #f2f6f8 79%, #f2f6f8 90%, #f2f6f8 97%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d8589', endColorstr='#f2f6f8', GradientType=0);
+    /* IE6-9 */
+    
+    background-clip: inherit;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+/* navbar */
+.navbar-brand{
+    background: url('../images/battlerealms-BRAND.png') center/contain no-repeat;
+    height: 56px;
+    width: 130px;
+}
+.navbar-toggler{
+    border: none;
+    color: var(--clr-white);
+}
+.nav-link{
+    color: transparent !important;
+}
+.nav-link:hover{
+    color: var(--clr-hover-light)!important;
+}
+/* home */
+.quote-container{
+    margin-bottom: 5rem !important;
+}
+.img-container{
+    position: relative;
+}
+.img-container img{
+    max-height: 100vh !important;
+}
+.img-container-layer-dark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0, 0, 0, 0.4));
+}
+
+@media screen and (max-width: 758px) {
+    h3{
+        font-size: 1.2rem;
+    }
+    p{
+        font-size: 0.7rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    h3{
+        font-size: 0.7rem;
+    }
+}
+@media only screen and (min-width: 758px) {
+    .quote-container{
+        margin-bottom: 10rem !important;
+    }
+}
+
+
