@@ -10,6 +10,9 @@
 
     --clr-hover-light: var(--clr-silver);
 }
+html {
+    scroll-behavior: smooth;
+}
 *{
     box-sizing: border-box;
     margin: 0;
@@ -23,20 +26,25 @@ body{
 .custom-bg-black{
     background-color: var(--clr-black);
 }
+.width-95{
+    max-width: 95%;
+}
 .width-90{
     max-width: 90%;
 }
 .width-80{
     max-width: 80%;
 }
-.rotate-90{
-    transform: rotate(90deg);
+.height50{
+    min-height: 50vh;
+}
+.height100{
+    min-height: 100vh;
 }
 .height100vh{
     height: 100vh;
 }
 .gradient-text-gray-gloss{
-    
     background: #7d8589;
     /* Old browsers */
     background: -moz-linear-gradient(top, #7d8589 0%, #a8b6bf 39%, #a8b6bf 39%, #b5c6d0 48%, #b5c6d0 50%, #d8e1e7 50%, #b5c6d0 50%, #b5c6d0 50%, #b5c6d0 50%, #f2f6f8 54%, #f2f6f8 54%, #f2f6f8 72%, #f2f6f8 79%, #f2f6f8 90%, #f2f6f8 97%);
@@ -52,6 +60,21 @@ body{
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
+
+/* custom divs */
+.underline{
+    height: 2px;
+    width: calc(80px + 10vw);
+    margin: 0;
+    background: #7d8589;
+    background: -moz-linear-gradient(top, #7d8589 0%, #a8b6bf 39%, #a8b6bf 39%, #b5c6d0 48%, #b5c6d0 50%, #d8e1e7 50%, #b5c6d0 50%, #b5c6d0 50%, #b5c6d0 50%, #f2f6f8 54%, #f2f6f8 54%, #f2f6f8 72%, #f2f6f8 79%, #f2f6f8 90%, #f2f6f8 97%);
+    background: -webkit-linear-gradient(top, #7d8589 0%, #a8b6bf 39%, #a8b6bf 39%, #b5c6d0 48%, #b5c6d0 50%, #d8e1e7 50%, #b5c6d0 50%, #b5c6d0 50%, #b5c6d0 50%, #f2f6f8 54%, #f2f6f8 54%, #f2f6f8 72%, #f2f6f8 79%, #f2f6f8 90%, #f2f6f8 97%);
+    background: linear-gradient(to bottom, #7d8589 0%, #a8b6bf 39%, #a8b6bf 39%, #b5c6d0 48%, #b5c6d0 50%, #d8e1e7 50%, #b5c6d0 50%, #b5c6d0 50%, #b5c6d0 50%, #f2f6f8 54%, #f2f6f8 54%, #f2f6f8 72%, #f2f6f8 79%, #f2f6f8 90%, #f2f6f8 97%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d8589', endColorstr='#f2f6f8', GradientType=0);
+}
+
+
+/* *************************************************************** */
 /* navbar */
 .navbar-brand{
     background: url('../images/battlerealms-BRAND.png') center/contain no-repeat;
@@ -68,7 +91,9 @@ body{
 .nav-link:hover{
     color: var(--clr-hover-light)!important;
 }
-/* home */
+
+/* *************************************************************** */
+/* home section */
 .quote-container{
     margin-bottom: 5rem !important;
 }
@@ -91,19 +116,76 @@ body{
     h3{
         font-size: 1.2rem;
     }
+    h2{
+        font-size: 1.5rem;
+    }
     p{
         font-size: 0.7rem;
+        text-align: center !important;
     }
 }
 @media screen and (max-width: 500px) {
     h3{
         font-size: 0.7rem;
     }
+    h2{
+        font-size: 1rem;
+    }
 }
 @media only screen and (min-width: 758px) {
     .quote-container{
         margin-bottom: 10rem !important;
     }
+    .home-left-paragraph{
+        text-align: right;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+}
+@media screen and (min-width: 1200px) {
+    p{
+        font-size: 1rem;
+    }
 }
 
+/* *************************************************************** */
+/* about section */
+.title{
+    padding: 20px;
+}
 
+/* gallery section */
+.img-gallery{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.col-img-container{
+    margin: 15px 0 15px 0;
+}
+#modal-image{
+    background-color: var(--clr-black);
+    max-height: 90vh;
+    object-fit: contain;
+}
+.close-modal-btn{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.404);
+    border: none;
+}
+.close-icon{
+    font-size: 5rem;
+    height: 50px;
+    width: 50px;
+}
+
+@media screen and (max-width: 758px) {
+    .close-icon {
+        font-size: 2.9rem;
+        height: 30px;
+        width: 30px;
+    }
+}
