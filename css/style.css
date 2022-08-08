@@ -189,3 +189,28 @@ body{
         width: 30px;
     }
 }
+
+/* shop */
+.card{
+    max-width: 400px;
+}
+.card-img-top{
+    height: 100px;
+    width: 250px;
+}
+.row-shop{
+    margin-top: 5rem;
+}
+/* custom card themes */
+.steam-card{
+    background-color: #121212;
+}
+.steam-btn{
+    background-color: #7da10e;
+}
+.gog-card{
+    background-color: #121212;
+}
+.gog-btn{
+    background-color: #d49d04;
+}
